@@ -5,7 +5,8 @@ typedef struct {
 	long N;			//population size
 	int n;			//string length
 	char **x;		//strings
-	float *f;		//fitness values	
+	float *f;		//fitness values
+	int t;			//total number of turbines	
 } Population;
 
 

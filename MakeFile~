@@ -1,0 +1,2 @@
+population.o: population.cc
+	$(CC) $(FLAG) population.cc

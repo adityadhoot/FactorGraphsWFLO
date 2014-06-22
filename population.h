@@ -25,7 +25,8 @@ class population {
 	void copyIndividual(Population *population, long where, char *x, float f);
 	void swapIndividuals(Population *population, long first, long second);
 	void printIndividual(FILE *out, char *x, int n); 
+class population {
 
-};
+	public:
 
 #endif
