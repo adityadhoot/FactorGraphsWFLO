@@ -18,7 +18,7 @@ void factorgraphs::initialize (FactorGraphParams *fgParams){
   intializeBasicStatistics(&populationStatistics,fgParams);   // initialize statistics
 
   // open output files (if the base of the output file names specified)
-  if (boaParams->outputFilename)
+  if (fgParams->outputFilename)
     {
       sprintf(filename,"%s.log",fgParams->outputFilename);
       logFile = fopen(filename,"w");

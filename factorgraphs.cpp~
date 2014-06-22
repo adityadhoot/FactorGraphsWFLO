@@ -126,7 +126,33 @@ int factorgraphs::terminationCriteria (FactorGraphParams *fgParams){
 		}
 	}
 
+ // if there's no reason to finish yet and the epsilon threshold was set, check it
 
+  if ((!result)&&(fgParams->epsilon>=0))
+    {
+      int   k;
+      float epsilon1;
+
+      // set epsilon1 to (1-boaParams->epsilon)
+
+      epsilon1 = 1-fgParams->epsilon;
+
+      // are all frequencies closer than epsilon to either 0 or 1?
+
+      result=EPSILON_TERMINATION;
+      for (k=0; k<populationStatistics.n; k++)
+	if ((populationStatistics.p1[k]>=boaParams->epsilon)&&(populationStatistics.p1[k]<=epsilon1))
+	  result=0;
+    }
+
+  // check if the number of generations wasn't exceeded
+
+  if ((!result)&&(fgParams->maxGenerations>=0))
+    result = (populationStatistics.generation>=fgParams->maxGenerations)? MAXGENERATIONS_TERMINATION:0;
+
+  // get back
+
+  return result;
 }
 
 //========================================================================================

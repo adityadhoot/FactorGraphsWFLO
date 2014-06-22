@@ -1,0 +1,24 @@
+#ifndef _BAYESIAN_h_
+#define _BAYESIAN_h_
+
+#include "boa.h"
+#include "population.h"
+#include "graph.h"
+#include "frequencyDecisionGraph.h"
+#include "operator.h"
+
+#define YES 1
+#define NO  0
+
+int constructTheNetwork(AcyclicOrientedGraph *G, FrequencyDecisionGraph **T, Population *P, BoaParams *params);
+int generateNewInstances(AcyclicOrientedGraph *G, FrequencyDecisionGraph **T, Population *P);
+int generateInstance(char *x, AcyclicOrientedGraph *G, int *index, FrequencyDecisionGraph **T);
+int recomputeDecisionGraphSplitGains(FrequencyDecisionGraph *t, LabeledTreeNode *x, AcyclicOrientedGraph *G,
+				     int maxParents, int node, int n, long N);
+int recomputeDecisionGraphMergeGains(FrequencyDecisionGraph *t, MergeOperator **merge, int *numMerges, int node, long N);
+int topologicalOrdering(AcyclicOrientedGraph *G, int *index);
+double nodeContribution(LabeledTreeNode *x, long N);
+int initializeMetric(BoaParams *params);
+int doneMetric();
+
+#endif

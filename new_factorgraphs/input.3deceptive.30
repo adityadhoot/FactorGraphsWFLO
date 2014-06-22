@@ -1,0 +1,15 @@
+populationSize  = 1000
+problemSize     = 100
+fitnessFunction = 7
+
+offspringPercentage = 50
+
+tournamentSize = 4 
+allowMerge = 0
+
+maxNumberOfGenerations = 100
+epsilon                = 0.01
+
+outputFile = output.windfarmlayout.100
+
+randSeed = 123

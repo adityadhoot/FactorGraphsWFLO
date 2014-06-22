@@ -1,0 +1,307 @@
+
+====================================================
+ Bayesian Optimization Algorithm with Decision Graphs
+ and an incorporated complexity measure
+
+ Version 1.1 (Released in August 2000)
+ Copyright (c) 2000 Martin Pelikan
+ Author: Martin Pelikan
+-----------------------------------------------
+ Parameter values from: input.windfarmlayout
+===============================================
+
+Parameter Values:
+
+Description                                                Identifier                 Type       Value
+----------------------------------------------------------------------------------------------------------------
+Size of the population                                     populationSize             long       10000
+Size of offspring to create (% from population)            offspringPercentage        float      50.000000
+
+Number of fitness function to use                          fitnessFunction            int        6 (Wind Farm Layout)
+Size of the problem (of one dimension)                     problemSize                int        100
+
+Tournament size (selection pressure)                       tournamentSize             int        4
+Maximal Number of Generations to Perform                   maxNumberOfGenerations     long       50
+Maximal Number of Fitness Calls (-1 when unbounded)        maxFitnessCalls            long       -1
+Termination threshold for the univ. freq. (-1 is ignore)   epsilon                    float      0.010000
+Stop if the optimum was found?                             stopWhenFoundOptimum       char       0 (No)
+Percentage of opt. & nonopt. ind. threshold (-1 is ignore) maxOptimal                 float      -1.000000
+
+Maximal number of incoming edges in dep. graph for the BOA maxIncoming                int        20
+Allow a merge operator?                                    allowMerge                 char       0 (No)
+
+Wait for enter after printing out generation statistics?   pause                      char       0
+
+Output file name                                           outputFile                 char*      output.windfarmlayout.20turbines
+Threshold for guidance (closeness to 0,1)                  guidanceThreshold          float      0.300000
+
+Random Seed                                                randSeed                   long       123
+--------------------------------------------------------
+Generation                   : 0
+Fitness evaluations          : 10000
+Fitness (max/avg/min)        : (96.642845 90.351209 81.652809)
+Population bias              : 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 1
+Fitness evaluations          : 15000
+Fitness (max/avg/min)        : (96.642845 45.497054 -169.000000)
+Population bias              : 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 2
+Fitness evaluations          : 20000
+Fitness (max/avg/min)        : (96.743988 46.334943 -196.000000)
+Population bias              : 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 3
+Fitness evaluations          : 25000
+Fitness (max/avg/min)        : (96.865921 47.035210 -169.000000)
+Population bias              : 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 4
+Fitness evaluations          : 30000
+Fitness (max/avg/min)        : (97.164871 46.898331 -169.000000)
+Population bias              : 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 5
+Fitness evaluations          : 35000
+Fitness (max/avg/min)        : (97.164871 47.475132 -144.000000)
+Population bias              : 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 6
+Fitness evaluations          : 40000
+Fitness (max/avg/min)        : (97.164871 47.673046 -144.000000)
+Population bias              : 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 7
+Fitness evaluations          : 45000
+Fitness (max/avg/min)        : (97.505287 48.602933 -144.000000)
+Population bias              : 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 8
+Fitness evaluations          : 50000
+Fitness (max/avg/min)        : (97.509094 49.105635 -121.000000)
+Population bias              : 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 9
+Fitness evaluations          : 55000
+Fitness (max/avg/min)        : (97.509094 50.080776 -121.000000)
+Population bias              : 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 10
+Fitness evaluations          : 60000
+Fitness (max/avg/min)        : (97.561562 49.582615 -121.000000)
+Population bias              : 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 11
+Fitness evaluations          : 65000
+Fitness (max/avg/min)        : (97.985382 50.249051 -100.000000)
+Population bias              : 0000000000000000000000000000000000000000.00000000000000000000000000000000000000000000000000000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 12
+Fitness evaluations          : 70000
+Fitness (max/avg/min)        : (97.985382 51.019509 -81.000000)
+Population bias              : 0000000000000000000000000000000000000000.00000000000000000000000000000000000000000000000000000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 13
+Fitness evaluations          : 75000
+Fitness (max/avg/min)        : (97.985382 51.754526 -81.000000)
+Population bias              : 0000000000000000000000000000000000000000.00000000000000000000000000000000000000000000000000000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 14
+Fitness evaluations          : 80000
+Fitness (max/avg/min)        : (97.985382 52.050567 -100.000000)
+Population bias              : 00000000000000000000.000000000000000000..00000000000000000000000000000000000000000000000000000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 15
+Fitness evaluations          : 85000
+Fitness (max/avg/min)        : (97.985382 52.480800 -100.000000)
+Population bias              : 00000000000000000000.0000000000000000000.0000000000000000000000000000.00000000000000000000.000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 16
+Fitness evaluations          : 90000
+Fitness (max/avg/min)        : (98.209808 53.228469 -121.000000)
+Population bias              : 00000000000000000000.000000000000000000..0000000000000000000000000000.00000000000000000000.000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 17
+Fitness evaluations          : 95000
+Fitness (max/avg/min)        : (98.209808 54.124927 -81.000000)
+Population bias              : 00000000000000000000.000000000000000000..000000000000000000.0000000000000000000000000000000000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 18
+Fitness evaluations          : 100000
+Fitness (max/avg/min)        : (98.209808 54.680494 -81.000000)
+Population bias              : 00000000000000000000.000000000000000000..00000000.000000000.000000000.00000000000000000000.000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 19
+Fitness evaluations          : 105000
+Fitness (max/avg/min)        : (98.353165 55.248453 -64.000000)
+Population bias              : 00000000000000000000.000000000000000000..00000000.000000000.000000000.00000000000000000000.000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 20
+Fitness evaluations          : 110000
+Fitness (max/avg/min)        : (98.353165 56.152328 -64.000000)
+Population bias              : 00000000000000000000.000000000000000000..00000000.000000000.000000000.00000000000000000000.000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 21
+Fitness evaluations          : 115000
+Fitness (max/avg/min)        : (98.534523 56.818262 -49.000000)
+Population bias              : 00000000000000000000.000000000000000000..00000000.000000000.000000000.00000000000000000000.000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 22
+Fitness evaluations          : 120000
+Fitness (max/avg/min)        : (98.534523 57.314635 -49.000000)
+Population bias              : .00000000.0000000000.000000000000000000..00000000.000000000.000000000.0000000000.000000000.000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 23
+Fitness evaluations          : 125000
+Fitness (max/avg/min)        : (98.534523 58.426912 -64.000000)
+Population bias              : .00000000..00000000..000000000.00000000..00000000.000000000.000000000.00000000.0.000000000.000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 24
+Fitness evaluations          : 130000
+Fitness (max/avg/min)        : (98.534523 58.971780 -36.000000)
+Population bias              : 000000000..00000000..000000000.00000000..00000000.000000000.000000000.00000000.0.000000000.000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 25
+Fitness evaluations          : 135000
+Fitness (max/avg/min)        : (98.688507 61.031867 -36.000000)
+Population bias              : .00000000..00000000..0000000.0.00000000..00000000.000000000..00000000.00000000...0000000.0.00000000.
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 26
+Fitness evaluations          : 140000
+Fitness (max/avg/min)        : (98.688507 62.132537 -36.000000)
+Population bias              : 000000000..00000000..0000000.0.00000000..00000000.0.0000000..00000000.00000000...0000000.0.00000000.
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 27
+Fitness evaluations          : 145000
+Fitness (max/avg/min)        : (98.690079 64.577341 -25.000000)
+Population bias              : 000000000..00000000..0000000.0.00000000..00000000.0.0000000..00000000.00000000...0000000.0..0000000.
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 28
+Fitness evaluations          : 150000
+Fitness (max/avg/min)        : (98.732063 68.454566 -25.000000)
+Population bias              : .00000000..00000000..0000000...00000000..00000000.0.0000000...0000000.00000000...0000000.0..000000..
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 29
+Fitness evaluations          : 155000
+Fitness (max/avg/min)        : (98.774040 77.386894 -16.000000)
+Population bias              : .00000000..0000000...0000000...00000000..00000000.0.000000....0000000.00000000.0.0000000.0..000000..
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 30
+Fitness evaluations          : 160000
+Fitness (max/avg/min)        : (98.825516 89.692360 -4.000000)
+Population bias              : .00000000...000000...0000000....0000000..00000000.0.000000....0000000.0.000000.0.0000000.0..000000..
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 31
+Fitness evaluations          : 165000
+Fitness (max/avg/min)        : (98.906693 96.306441 -4.000000)
+Population bias              : .00000000...000000...0000000....0000000..00000000...000000....0000000...000000.0.0000000....000000..
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 32
+Fitness evaluations          : 170000
+Fitness (max/avg/min)        : (98.928474 97.013746 -4.000000)
+Population bias              : .00000000...000000...0000000....0000000..00000000...000000....0000000...000000...0000000....000000..
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 33
+Fitness evaluations          : 175000
+Fitness (max/avg/min)        : (98.972031 97.605950 -1.000000)
+Population bias              : .00000000...000000..10000000....0000000..00000000...000000....0000000...000000...0000000....000000..
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 34
+Fitness evaluations          : 180000
+Fitness (max/avg/min)        : (98.972031 98.017652 -4.000000)
+Population bias              : .000000001.0000000..10000000...00000000.1000000001..0000000...00000001..000000..10000000...0000000..
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 35
+Fitness evaluations          : 185000
+Fitness (max/avg/min)        : (98.993805 98.192937 -4.000000)
+Population bias              : .000000001.0000000..100000000.100000000.1000000001..0000000...00000001.0000000..10000000..10000000..
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 36
+Fitness evaluations          : 190000
+Fitness (max/avg/min)        : (98.993805 98.383976 -4.000000)
+Population bias              : 100000000110000000..100000000110000000011000000001..00000001.00000000110000000..10000000..100000000.
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 37
+Fitness evaluations          : 195000
+Fitness (max/avg/min)        : (98.993805 98.553919 -1.000000)
+Population bias              : 100000000110000000011000000001100000000110000000011000000001100000000110000000..100000000.1000000001
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 38
+Fitness evaluations          : 200000
+Fitness (max/avg/min)        : (98.993805 98.524577 -1.000000)
+Population bias              : 1000000001100000000110000000011000000001100000000110000000011000000001100000000110000000011000000001
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 39
+Fitness evaluations          : 205000
+Fitness (max/avg/min)        : (98.993805 98.937510 -1.000000)
+Population bias              : 1000000001100000000110000000011000000001100000000110000000011000000001100000000110000000011000000001
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 40
+Fitness evaluations          : 210000
+Fitness (max/avg/min)        : (98.993805 98.974959 98.884911)
+Population bias              : 1000000001100000000110000000011000000001100000000110000000011000000001100000000110000000011000000001
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 41
+Fitness evaluations          : 215000
+Fitness (max/avg/min)        : (98.993805 98.987150 98.906693)
+Population bias              : 1000000001100000000110000000011000000001100000000110000000011000000001100000000110000000011000000001
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 42
+Fitness evaluations          : 220000
+Fitness (max/avg/min)        : (98.993805 98.993748 98.950249)
+Population bias              : 1000000001100000000110000000011000000001100000000110000000011000000001100000000110000000011000000001
+Best solution in the pop.    : Statistic not available.
+
+=================================================================
+FINAL STATISTICS
+Termination reason           : Bit convergence (with threshold epsilon)
+Generations performed        : 42
+Fitness evaluations          : 220000
+Fitness (max/avg/min)        : (98.993805 98.993748 98.950249)
+Population bias              : 1000000001100000000110000000011000000001100000000110000000011000000001100000000110000000011000000001
+Best solution in the pop.    : Statistic not available.
+
+The End.

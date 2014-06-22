@@ -1,0 +1,93 @@
+--------------------------------------------------
+          A Simple Implementation of 
+   the Bayesian Optimization Algorithm (BOA) 
+         with Decision Graphs in C++ 
+--------------------------------------------------
+
+author:   Martin Pelikan
+version:  1.1
+released: August 2000
+
+1. INTRODUCTION
+----------------
+
+The instructions for compiling and using the simple implementation of
+the BOA, version 1.0, can be found in an IlliGAL tech-report
+99011. The report can be downloaded from the IlliGAL www-site: 
+http://www-illigal.ge.uiuc.edu/
+
+The short version of the instructions for compiling the code, using
+the resulting executable and some more comments follow. However, we
+encourage you to read the report in order to take advantage of the
+features of the implementation and understand what is actually going
+on when you see all the outputs. 
+
+The changes from version 1.0 are only little, I have just identified
+a couple of bugs and eliminated them.
+
+2. COMPILATION
+---------------
+
+In Makefile, change the following two lines:
+
+1) Line 36 - In the statement CC = CC, the CC on the right-hand side should be
+changed to the name of a preferred C++ compiler on your machine. With
+a gcc, for instance, the line should be changed to CC = gcc. 
+
+2) Line 42 - In the statement OPTIMIZE = -O3, the required optimization level 
+should be set (for GNU gcc this is -O4, for SGI CC it is -O3). For no code 
+optimization, use only OPTIMIZE = . For instance, for a maximal optimization 
+with gcc, i.e. -O4, use OPTIMIZE = -O4. All modules are compiled at once since 
+some compilers (as SGI CC) use intermodule optimization that does not allow
+them to compile each source file separately and link them together afterwards. 
+
+Run the following command line:
+
+make all
+
+After compiling the source codes, your directory should contain an
+executable file boa.
+
+
+3. COMMAND LINE PARAMETERS
+---------------------------
+
+There are three parameters that can be passed to the boa:
+
+<input file>      -> input file name
+-h                -> help on command line parameters
+-paramDescription -> print out the description of input file parameters
+
+
+4. EXAMPLE INPUT FILES
+-----------------------
+
+Example input files are located in a sub-directory examples. Files with
+the names starting with input are input files and files starting with
+output are output files produced with the parameters specified in the
+corresponding input files.
+
+
+4. COMMENTS
+------------
+
+This code is distributed for academic purposes with absolutely no
+warranty of any kind, either expressed or implied, to the extent
+permitted by applicable state law. We are not responsible for any
+damage resulting from its proper or improper use.
+
+If you have any comments or identify any bugs, please contact the
+author at the following address (email is the preferred form of
+communication):
+
+Martin Pelikan
+Illinois Genetic Algorithms Laboratory
+Department of General Engeneering
+University of Illinois at Urbana-Champaign
+117 Transportation Building
+104 South Mathews Avenue
+Urbana, IL 61801
+email: pelikan@illigal.ge.uiuc.edu
+
+
+Happy BOAing!

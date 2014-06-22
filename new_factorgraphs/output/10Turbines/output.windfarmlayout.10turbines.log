@@ -1,0 +1,85 @@
+
+====================================================
+ Bayesian Optimization Algorithm with Decision Graphs
+ and an incorporated complexity measure
+
+ Version 1.1 (Released in August 2000)
+ Copyright (c) 2000 Martin Pelikan
+ Author: Martin Pelikan
+-----------------------------------------------
+ Parameter values from: input.windfarmlayout
+===============================================
+
+Parameter Values:
+
+Description                                                Identifier                 Type       Value
+----------------------------------------------------------------------------------------------------------------
+Size of the population                                     populationSize             long       10000
+Size of offspring to create (% from population)            offspringPercentage        float      50.000000
+
+Number of fitness function to use                          fitnessFunction            int        6 (Wind Farm Layout)
+Size of the problem (of one dimension)                     problemSize                int        100
+
+Tournament size (selection pressure)                       tournamentSize             int        4
+Maximal Number of Generations to Perform                   maxNumberOfGenerations     long       5
+Maximal Number of Fitness Calls (-1 when unbounded)        maxFitnessCalls            long       -1
+Termination threshold for the univ. freq. (-1 is ignore)   epsilon                    float      0.010000
+Stop if the optimum was found?                             stopWhenFoundOptimum       char       0 (No)
+Percentage of opt. & nonopt. ind. threshold (-1 is ignore) maxOptimal                 float      -1.000000
+
+Maximal number of incoming edges in dep. graph for the BOA maxIncoming                int        20
+Allow a merge operator?                                    allowMerge                 char       0 (No)
+
+Wait for enter after printing out generation statistics?   pause                      char       0
+
+Output file name                                           outputFile                 char*      output.windfarmlayout.10turbines
+Threshold for guidance (closeness to 0,1)                  guidanceThreshold          float      0.300000
+
+Random Seed                                                randSeed                   long       123
+--------------------------------------------------------
+Generation                   : 0
+Fitness evaluations          : 10000
+Fitness (max/avg/min)        : (100.000000 95.028791 81.526123)
+Population bias              : 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 1
+Fitness evaluations          : 15000
+Fitness (max/avg/min)        : (100.000000 52.603218 -100.000000)
+Population bias              : 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 2
+Fitness evaluations          : 20000
+Fitness (max/avg/min)        : (100.000000 53.445668 -169.000000)
+Population bias              : 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 3
+Fitness evaluations          : 25000
+Fitness (max/avg/min)        : (100.000000 54.706870 -81.000000)
+Population bias              : 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 4
+Fitness evaluations          : 30000
+Fitness (max/avg/min)        : (100.000000 54.719493 -81.000000)
+Population bias              : 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Best solution in the pop.    : Statistic not available.
+--------------------------------------------------------
+Generation                   : 5
+Fitness evaluations          : 35000
+Fitness (max/avg/min)        : (100.000000 55.565918 -81.000000)
+Population bias              : 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Best solution in the pop.    : Statistic not available.
+
+=================================================================
+FINAL STATISTICS
+Termination reason           : Maximal number of generations reached
+Generations performed        : 5
+Fitness evaluations          : 35000
+Fitness (max/avg/min)        : (100.000000 55.565918 -81.000000)
+Population bias              : 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Best solution in the pop.    : Statistic not available.
+
+The End.

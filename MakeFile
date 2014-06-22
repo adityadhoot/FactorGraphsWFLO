@@ -1,2 +1,8 @@
 population.o: population.cpp
 	$(CC) $(FLAG) population.cpp
+
+statistics.o: statistics.cpp
+	$(CC) $(FLAG) statistics.cpp
+
+factorgraphs.o: factorgraphs.cpp
+	$(CC) $(FLAG) factorgraphs.cpp

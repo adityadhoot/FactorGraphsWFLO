@@ -1,0 +1,15 @@
+populationSize  = 1000
+problemSize     = 100
+fitnessFunction = 1
+
+offspringPercentage = 50
+
+tournamentSize = 4
+allowMerge = 0
+
+maxNumberOfGenerations = 70
+epsilon                = 0.01
+
+outputFile = Turbines30_100_WR24
+
+randSeed = 123
