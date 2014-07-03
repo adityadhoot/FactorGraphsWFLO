@@ -393,7 +393,7 @@ float wflofitness (char *x, int n)
 			}
 			if (count < turs){
 			turbines(count) = (x*300);
-			int test = count + turs;;
+			int test = count + turs;
 			turbines (test) = (y*300);
 		}
 			count = count + 1;

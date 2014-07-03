@@ -333,7 +333,7 @@ int generateOffspring(long t, Population *parents, Population *offspring, BoaPar
 
   // generate the new points
 
-  generateNewInstances(G,T,offspring);
+  generateNewInstances(G,T,offspring, boaParams);
 
   // delete the network
 

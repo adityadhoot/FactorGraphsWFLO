@@ -360,7 +360,7 @@ double WindFarmLayout::calculateFarmPower (arma::vec someTurbineCoordinates){
 	//cout << "Effective Wind Speeds at each Turbine" << endl << turbineEffectiveWindSpeeds;
 
 	if (farmEfficiency == 1) {
-		cout << "Total power: " << totalPower << " (" << farmEfficiency * 100 << "%)" << endl;
+	//	cout << "Total power: " << totalPower << " (" << farmEfficiency * 100 << "%)" << endl;
 	}	
 	return ((this->farmEfficiency)*100);
 	

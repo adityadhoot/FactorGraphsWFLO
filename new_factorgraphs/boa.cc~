@@ -67,29 +67,7 @@ char *terminationReasonDescription[5] = {
 int initialize(BoaParams *boaParams)
 {
 
-	std::string wl_file = "input/init_layout.out";
-	std::string turbine_file = "input/turbine_coordinates.in";
-	std::string wrf_file = "input/wrf_test.rsf";
-	std::string fcoordinates = "input/coordinates";
-	std::string fwindDirections = "input/windDirections";
-	std::string fwindSpeeds = "input/windSpeeds";
-	std::string fwindProb = "input/windProbabilities";
-	std::string fZ = "input/turbineHeights";
-	std::string fCt = "input/CtTable";
-	std::string fDRot = "input/rotorDiameters";
-	std::string fZ0 = "input/roughnessLength";
-	std::string fpowerTable = "input/powerTable";
-
-	WindFarmLayout wind_farm_layout (wl_file.c_str(), turbine_file.c_str(), wrf_file.c_str(), fcoordinates,
-																			fwindDirections, fwindSpeeds, fwindProb, fZ,
-																			fCt, fDRot, fZ0, fpowerTable);
-
-	arma::vec turbines = wind_farm_layout.getTurbineCoordinates ();
-	double power = wind_farm_layout.calculateFarmPower(turbines);
-	std::cout <<power <<std::endl;
-
-
-  char filename[200];
+	 char filename[200];
 
   // set the fitness function to be optimized
 
@@ -355,7 +333,12 @@ int generateOffspring(long t, Population *parents, Population *offspring, BoaPar
 
   // generate the new points
 
-  generateNewInstances(G,T,offspring);
+  generateNewInstances(G,T,offspring, boaParams);
+
+int generateNewInstances(AcyclicOrientedGraph *G,
+			 FrequencyDecisionGraph **T,
+			 Population *P,
+			BoaParams *params)
 
   // delete the network
 

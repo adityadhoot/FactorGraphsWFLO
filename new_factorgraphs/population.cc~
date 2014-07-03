@@ -108,7 +108,7 @@ int generatePopulation(Population *population)
 {
   long i;
   int  j;
-	int turs=20;
+	int turs=10;
 	int tur_count =0;
 
   // generate bit by bit
@@ -124,7 +124,7 @@ int generatePopulation(Population *population)
 				turs = turs - 1;
 			}
 		}
-		turs = 20;
+		turs = 10;
 	}
 
 /*

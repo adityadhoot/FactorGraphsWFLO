@@ -15,10 +15,10 @@ int constructTheNetwork(AcyclicOrientedGraph *G,
 			Population *P,
 			BoaParams *params);
 
-int generateNewInstances(AcyclicOrientedGraph *G,
-			 FrequencyDecisionGraph **T,
-			 Population *P,
-			BoaParams *params);
+int generateNewInstances(char *x,
+		     AcyclicOrientedGraph *G,
+		     int *index,
+		     FrequencyDecisionGraph **T);
 
 
 int generateInstance(char *x,

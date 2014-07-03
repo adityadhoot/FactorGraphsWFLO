@@ -362,7 +362,7 @@ float wflofitness (char *x, int n)
 																			fwindDirections, fwindSpeeds, fwindProb, fZ,
 																			fCt, fDRot, fZ0, fpowerTable);*/
 
-	int turs = 20;	
+	int turs = 30;	
 	int count = 0;
 	for (int i=0; i<n;i++){
 		if (x[i] == 1){

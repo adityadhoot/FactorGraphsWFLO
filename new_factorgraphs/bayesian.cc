@@ -25,7 +25,33 @@
 #include "mymath.h"
 
 #define FIXED_THRESHOLD 0.000
+// ================================================================================
+//
+// name:          constructTheFactorGraphNetwork
+//
+// function:      constructs a factor graph given the population (including the decision
+//                graphs containing needed frequencies and the network itself
+//                needed in fact only for topological ordering of the variables. 
+//								Simply converts the Bayesian Network into a Factor Graph
+//
+// parameters:    G........the Bayesian Network (input)
+//                T........the decision graphs for each variable (input)
+//                P........the population
+//                params...parameters of the BOA
+//								F........the resulting Factor Graph (output)
+//
+// returns:       (int) 0
+//
+// ================================================================================
 
+/*int constructTheFactorGraph(AcyclicOrientedGraph *G,
+			FrequencyDecisionGraph **T,
+			Population *P,
+			BoaParams *params)
+{
+
+
+}*/
 // ================================================================================
 //
 // name:          constructTheNetwork
@@ -210,7 +236,8 @@ int constructTheNetwork(AcyclicOrientedGraph *G,
 
 int generateNewInstances(AcyclicOrientedGraph *G,
 			 FrequencyDecisionGraph **T,
-			 Population *P)
+			 Population *P,
+			BoaParams *params)
 {
   long N;
   int  n;
@@ -398,8 +425,7 @@ int recomputeDecisionGraphSplitGains(FrequencyDecisionGraph *t,
   double gain;
   LabeledTreeNode *dummy;
   double *leftValue0,*leftValue1;
-  double *rightValue0,*rightValue1
-;
+  double *rightValue0,*rightValue1;
   double leftContribution;
   double rightContribution;
 
@@ -422,8 +448,8 @@ int recomputeDecisionGraphSplitGains(FrequencyDecisionGraph *t,
     };
 
   // compute basic contribution of this node (before split)
-
-  scoreBefore = nodeContribution(x,N);
+	
+	scoreBefore = nodeContribution(x,N);
 
   // allocate memory for the frequencies of the splits
 
@@ -476,17 +502,15 @@ int recomputeDecisionGraphSplitGains(FrequencyDecisionGraph *t,
 	x->rightValue1Array[label]=rightValue1[label];
 	x->leftValue0Array[label]=leftValue0[label];
 	x->leftValue1Array[label]=leftValue1[label];
-      }
-      else
-	x->dArrayTmp[label]=-1;
-    }
+  }
+    else
+			x->dArrayTmp[label]= -1;
+  }
   
   // delete the dummy node
-  
   delete dummy;
 
   // free the memory used by the frequencies of the splits
-
   free(leftValue0);
   free(leftValue1);
   free(rightValue0);

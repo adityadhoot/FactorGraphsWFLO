@@ -332,6 +332,8 @@ double WindFarmLayout::calculateFarmPower (arma::vec someTurbineCoordinates){
 			}
 		}
 
+
+	// Should be using structs instead here, very annoying to use hard names for packaged variables. 
 		for (unsigned l = 0; l < windSpeeds.n_cols; l++) {
 			for (unsigned i = 0; i < numT; i++) {
 				effSpeed(i, l) = windSpeeds(w, l) * (1 - sqrt(defSumSqr(i, l)));

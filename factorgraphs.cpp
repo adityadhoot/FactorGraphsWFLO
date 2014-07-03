@@ -182,6 +182,16 @@ void factorgraphs::generateOffspring (long t, Population *parents, Population *o
 	
 	printModel (modelFile, t, G, T); //print out the model for this generation
 	generateNewInstances (G, T, offspring); //generate the new points
+
+
+/*
+BP mp(fg, opts("updates",string("SEQRND"))("logdomain",false)("inference",string("MAXPROD"))("damping",string("0.1")));
+        // Initialize max-product algorithm
+        mp.init();
+        // Run max-product algorithm
+        mp.run();
+
+*/
 	
 	//delete network and trees
 	delete G;
@@ -251,6 +261,12 @@ void factorgraphs::done (FactorGraphParams *fgParams){
 
 FILE *getLogFile()
 {
+
+	int x, y, z;
+	x = 0; 
+	y = x;
+	z = 10;
+	
   return logFile;
 }
 
